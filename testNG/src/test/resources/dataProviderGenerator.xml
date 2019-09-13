@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite" thread-count="2">
+    <parameter name="folderName" value="dataProviderTests" />
+  <test name="dataProviderTests">
+      <classes>
+          <class name="com.mbabilo.tests.dataProviderTests">
+              <methods>
+                  <include name="testDP2"/>
+              </methods>
+          </class>
+
+      </classes>
+  </test>
+</suite>

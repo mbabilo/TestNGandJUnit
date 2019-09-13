@@ -2,7 +2,10 @@ package com.mbabilo.tests;
 
 import javafx.scene.layout.Priority;
 import org.testng.annotations.Test;
+
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 
 import static org.testng.Assert.assertFalse;
@@ -17,6 +20,7 @@ public class simpleTests extends TestBase {
         System.out.println("positive1");
         File file = new File(relativePath);
         assertTrue(file.createNewFile(), "File " + relativePath + " already exists in the project root directory");
+
     }
 
     @Test(groups = "positive", priority = 2)

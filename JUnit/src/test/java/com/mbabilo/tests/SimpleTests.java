@@ -1,5 +1,7 @@
 package com.mbabilo.tests;
 
+import com.mbabilo.tests.categoryInterface.MyCategories;
+import com.mbabilo.tests.fixtures.FixtureRules;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
@@ -9,7 +11,7 @@ import java.io.IOException;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
-public class SimpleTests extends TestBase {
+public class SimpleTests extends FixtureRules {
 
 
     @Test

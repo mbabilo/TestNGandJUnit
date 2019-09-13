@@ -1,4 +1,4 @@
-package com.mbabilo.tests;
+package com.mbabilo.tests.categoryInterface;
 
 public interface MyCategories {
   

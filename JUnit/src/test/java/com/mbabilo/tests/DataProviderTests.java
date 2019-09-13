@@ -1,6 +1,7 @@
 package com.mbabilo.tests;
 
 
+import com.mbabilo.tests.fixtures.FixtureRules;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -19,7 +20,7 @@ import static java.lang.StrictMath.random;
 import static org.testng.Assert.assertTrue;
 
 @RunWith(DataProviderRunner.class)
-public class DataProviderTests extends TestBase {
+public class DataProviderTests extends FixtureRules {
 
     @DataProvider
     public static Object[] name () {

@@ -1,4 +1,4 @@
-package com.mbabilo.tests;
+package com.mbabilo.tests.tests;
 
 
 import com.mbabilo.tests.fixtures.FixtureRules;

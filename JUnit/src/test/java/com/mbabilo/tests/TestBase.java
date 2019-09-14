@@ -1,10 +1,8 @@
-package com.mbabilo.tests;
+package com.mbabilo.tests.tests;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
-import org.testng.annotations.Parameters;
+
 
 import java.io.File;
 import java.io.IOException;

@@ -5,8 +5,8 @@
   <test name="byPriority">
       <groups>
           <run>
-              <include name="negative" />
               <include name="positive" />
+              <include name="negative" />
           </run>
       </groups>
       <classes>

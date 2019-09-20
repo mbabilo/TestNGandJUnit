@@ -24,7 +24,7 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>
-                            src/byPriority-suite.xml
+                            src/test/resources/byPriority-suite.xml
                         </suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>

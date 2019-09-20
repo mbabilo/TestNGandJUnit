@@ -2,6 +2,8 @@ package com.mbabilo.tests;
 
 
 import com.mbabilo.fixtures.FixtureRules;
+import org.hamcrest.CoreMatchers;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -17,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static java.lang.StrictMath.random;
-import static org.testng.Assert.assertTrue;
+
 
 @RunWith(DataProviderRunner.class)
 public class DataProviderTests extends FixtureRules {
@@ -54,7 +56,8 @@ public class DataProviderTests extends FixtureRules {
         String relativePath = "JUnitFolder\\" + String.valueOf(name);
         System.out.println("positive1");
         File file = new File(relativePath);
-        assertTrue(file.createNewFile(), "File " + relativePath + " already exists in the project root directory");
+        //assertTrue(file.createNewFile(), "File " + relativePath + " already exists in the project root directory");
+        Assert.assertThat(file.createNewFile(), CoreMatchers.equalTo(true));
     }
 
     @Test
@@ -63,7 +66,8 @@ public class DataProviderTests extends FixtureRules {
         String relativePath = "JUnitFolder\\" + name;
         System.out.println("positive2");
         File file = new File(relativePath);
-        assertTrue(file.createNewFile(), "File " + relativePath + " already exists in the project root directory");
+        //assertTrue(file.createNewFile(), "File " + relativePath + " already exists in the project root directory");
+        Assert.assertThat(file.createNewFile(), CoreMatchers.equalTo(true));
     }
 
 }

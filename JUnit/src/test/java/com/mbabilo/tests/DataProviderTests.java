@@ -1,7 +1,7 @@
-package com.mbabilo.tests.tests;
+package com.mbabilo.tests;
 
 
-import com.mbabilo.tests.fixtures.FixtureRules;
+import com.mbabilo.fixtures.FixtureRules;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 

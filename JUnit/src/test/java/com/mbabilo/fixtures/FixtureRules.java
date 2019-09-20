@@ -1,4 +1,4 @@
-package com.mbabilo.tests.fixtures;
+package com.mbabilo.fixtures;
 
 import org.junit.ClassRule;
 import org.junit.rules.ExternalResource;

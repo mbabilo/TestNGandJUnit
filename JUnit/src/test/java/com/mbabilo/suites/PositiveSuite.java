@@ -1,7 +1,7 @@
-package com.mbabilo.tests.suites;
+package com.mbabilo.suites;
 
-import com.mbabilo.tests.categoryInterface.MyCategories;
-import com.mbabilo.tests.tests.SimpleTests;
+import com.mbabilo.tests.SimpleTests;
+import com.mbabilo.categoryInterface.MyCategories;
 import org.junit.experimental.categories.Categories;
 import org.junit.experimental.categories.Categories.IncludeCategory;
 import org.junit.runner.RunWith;

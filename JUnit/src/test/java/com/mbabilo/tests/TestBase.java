@@ -1,4 +1,4 @@
-package com.mbabilo.tests.tests;
+package com.mbabilo.tests;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;

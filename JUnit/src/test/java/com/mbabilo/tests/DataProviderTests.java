@@ -2,6 +2,7 @@ package com.mbabilo.tests;
 
 
 import com.mbabilo.fixtures.FixtureRules;
+import com.mbabilo.fixtures.UniversalDataProviders;
 import org.hamcrest.CoreMatchers;
 import org.junit.Assert;
 import org.junit.Test;
@@ -18,8 +19,11 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.mbabilo.tests.DataSource.Type.FILE;
+import static com.mbabilo.tests.DataSource.Type.RESOURCE;
 import static java.lang.StrictMath.random;
 
+import com.mbabilo.tests.DataSource.Type.*;
 
 @RunWith(DataProviderRunner.class)
 public class DataProviderTests extends FixtureRules {
@@ -51,6 +55,26 @@ public class DataProviderTests extends FixtureRules {
     }
 
     @Test
+    @UseDataProvider(value = "dataSourceLoader", location = UniversalDataProviders.class)
+    @DataSource(value = "/user.data", type = RESOURCE)
+    public void test1(String user, String password) {
+        System.out.println(user + ":" + password);
+    }
+
+
+    @Test
+    //@UseDataProvider("loadNameFromFile")
+    @UseDataProvider(value = "dataSourceLoader", location = UniversalDataProviders.class)
+    @DataSource(value = "/user.data", type = FILE)
+    public void test3(Object name) throws IOException {
+        System.out.println(name);
+        //Assert.assertThat(file.createNewFile(), CoreMatchers.equalTo(true));
+    }
+
+
+
+    ////old way  tests
+    @Test
     @UseDataProvider("name")
     public void testDP1(Object name) throws IOException {
         String relativePath = "JUnitFolder\\" + String.valueOf(name);
@@ -69,5 +93,6 @@ public class DataProviderTests extends FixtureRules {
         //assertTrue(file.createNewFile(), "File " + relativePath + " already exists in the project root directory");
         Assert.assertThat(file.createNewFile(), CoreMatchers.equalTo(true));
     }
+
 
 }

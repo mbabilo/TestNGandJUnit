@@ -1,8 +1,10 @@
 package com.mbabilo.fixtures;
 
 import org.junit.ClassRule;
+import org.junit.Rule;
 import org.junit.rules.ExternalResource;
 import org.junit.rules.RuleChain;
+import org.junit.rules.TestRule;
 
 import java.io.File;
 import java.io.IOException;
@@ -45,6 +47,5 @@ public class FixtureRules {
 
     @ClassRule
     public static RuleChain rules = RuleChain.outerRule(firstRule).around(secondRule);
-
 
 }

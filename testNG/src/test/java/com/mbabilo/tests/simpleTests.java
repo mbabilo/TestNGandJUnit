@@ -1,11 +1,8 @@
 package com.mbabilo.tests;
 
-import javafx.scene.layout.Priority;
 import org.testng.annotations.Test;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 
 import static org.testng.Assert.assertFalse;
@@ -24,8 +21,9 @@ public class simpleTests extends TestBase {
     }
 
     @Test(groups = "positive", priority = 1)
+    @TempDir(read = true, write = false)
     public void test2() throws IOException {
-        String relativePath = "TMP\\file2.bat";
+        String relativePath = "foldername\\file2.bat";
         System.out.println("positive2");
         File file = new File(relativePath);
         assertTrue(file.createNewFile(), "File " + relativePath + " already exists in the project root directory");

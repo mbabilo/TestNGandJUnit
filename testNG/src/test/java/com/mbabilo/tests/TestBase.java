@@ -1,15 +1,26 @@
 package com.mbabilo.tests;
 
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 import static org.apache.commons.io.FileUtils.deleteDirectory;
 
 public class TestBase {
+
+    @BeforeMethod
+    void beforeMethod(Method m) {
+        TempDir tempDir = m.getAnnotation(TempDir.class);
+        if (tempDir != null) {
+            System.out.println("set " + tempDir.read());
+            System.out.println("set " + tempDir.write());
+        }
+    }
 
 
     @BeforeSuite(alwaysRun = true)
